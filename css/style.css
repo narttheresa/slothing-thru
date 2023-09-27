@@ -1,3 +1,29 @@
-body {
-    background: blue;
+ @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: 'Mooli', sans-serif;
+ }
+
+
+:root {
+    background: rgb(247, 244, 240);
+    text-color: rgb(143, 141, 135);
+ }
+
+html {
+    font-size: 50%;
+    overflow-x: hidden;
+
 }
+
+
+body {
+    background: rgb(247, 244, 240);
+    color: rgb(143, 141, 135);   
+}
+
