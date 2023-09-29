@@ -37,7 +37,7 @@ body {
 .sticky-sidebar h1  {
     font-size: 2.5rem;
     font-weight:bolder;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
     padding-top: 2rem;
 }
 
@@ -50,8 +50,12 @@ body {
 h2 {
     font-size: 1rem;
     font-weight: bold;
-    margin-top: -1rem;
+    margin: 0.5rem 0.2rem;
     color: blanchedalmond;
+}
+
+h2, p {
+    padding: 0.3rem 0.2rem;
 }
 
 .sticky-sidebar p {
@@ -66,20 +70,21 @@ h2 {
 
 .sticky-sidebar,
 .main-content {
-    padding: 5rem;
+    padding: 3rem;
     background-color: rgba(192, 176, 240, 0.832);
+    line-height: 1.5;
+    justify-content:right;
 }
 
 .main-content {
     width: 50%;
     height: 150vh;
-    
 }
 
 
 .sticky-sidebar {
     width: 40%;
-    height: 100vh;
+    height: 80vh;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -91,22 +96,43 @@ h2 {
 
 .sticky-sidebar .nav-hidden {
     display: block;
+    padding-top: 2rem; 
 }
 
 .nav-hidden, ul, li {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0.2rem 0;
     line-height: 2.1;
 }
 
+/*social-media icon insert*/
 
+.sticky-sidebar .social-media a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    background: transparent;
+    color: blanchedalmond;
+    margin: 1rem .8rem;
+    font-size: 1.5rem;
+    margin: 1rem 0.5rem; 
+    transition: 0.6s ease-in-out;
+ }
+
+ .sticky-sidebar .social-media a:hover {
+    color:#6df5ff;
+ }
+
+ 
 .sticky-sidebar .nav-list a:link, a:visited {
     text-transform: uppercase;
     font-size: 0.7rem;
     letter-spacing: 0.1rem;
     text-decoration: none;
     font-weight: bold;
+
 }
 
 .sticky-sidebar .nav-hidden .nav-list a {
@@ -172,29 +198,6 @@ h2 {
     width: 100%;
 }
 
-
-.sticky-sidebar .nav-list .skills:before {
-    content:'';
-    text-align:center; 
-    background: #6df5ff;
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 0;
-    height: 1.5px;
-    transition: all 0.3s ease-in-out;  
-}
-
-.sticky-sidebar .nav-list .skills:hover {
-    color:aquamarine;
-    background-position: 0;
-}
-
-.sticky-sidebar .nav-list .skills:hover::before {
-    width: 100%;
-}
-
 .sticky-sidebar .nav-list .experience:before {
     content:'';
     text-align:center; 
@@ -240,5 +243,20 @@ h2 {
     width: 100%;
 }
 
+/*experience list icons*/
+
+.experience-list .skills-icon {
+    height: 50px;
+    width: 50px;
+}
 
 
+.experience-list .skills-icon, img {
+    display: inline-flex;
+    margin: 2rem 2.5rem;
+    height: 50px;
+    width:50px;
+    filter: grayscale(100%);
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
