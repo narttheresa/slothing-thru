@@ -21,7 +21,7 @@
 }
 
 body {
-    color:rgb(255, 255, 255);
+    color:blanchedalmond;
 }
 
 /*sticky sidebar and main content */
@@ -30,7 +30,7 @@ body {
 .sticky-wrapped,
 .sticky-sidebar 
 {
-    padding-left: 20vh;
+    padding-left: 10vh;
    
 }
 
@@ -38,20 +38,51 @@ body {
     font-size: 2.5rem;
     font-weight:bolder;
     padding-bottom: 2.5rem;
-    padding-top: 2rem;
+    padding-top: 8rem;
+    width: 300px;
 }
 
 .sticky-sidebar h1 a:link, a:visited {
     text-decoration: none;
-    color: aliceblue;
+    color: blanchedalmond;
 } 
 
+.sticky-sidebar p {
+    margin: 2.5rem 0rem;
+    background: linear-gradient(to right, aquamarine, pink, springgreen);
+    background-size: 100% 100%;
+    background-clip: text;
+    -webkit-background-clip:text;
+    animation: rainbow 2s ease-in-out infinite;
+    color:blanchedalmond;
+    font-size: 1.2rem;
+    width: 50rem;
+    display: block;
+    text-align:left;
+    transition: color .2s ease-in-out;
+    text-transform:uppercase;
+    font-weight: 600;
+}
+
+.sticky-sidebar p:hover {
+    color:rgba(0,0,0,0);
+}
+@keyframes rainbow { 
+  0%{background-position:left}
+  50%{background-position:right}
+  100%{background-position:left}
+}
 
 h2 {
-    font-size: 1rem;
+    font-size: 3rem;
     font-weight: bold;
     margin: 0.5rem 0.2rem;
     color: blanchedalmond;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color:blanchedalmond;
 }
 
 h2, p {
@@ -70,21 +101,21 @@ h2, p {
 
 .sticky-sidebar,
 .main-content {
-    padding: 3rem;
+    padding: 2rem;
     background-color: rgba(192, 176, 240, 0.832);
     line-height: 1.5;
     justify-content:right;
 }
 
 .main-content {
-    width: 50%;
+    width: 60%;
     height: 150vh;
 }
 
 
 .sticky-sidebar {
-    width: 40%;
-    height: 80vh;
+    width: 25%;
+    height: 2vh;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -245,18 +276,33 @@ h2, p {
 
 /*experience list icons*/
 
-.experience-list .skills-icon {
-    height: 50px;
-    width: 50px;
+#experience-list .skills-icon, img {
+    display: inline-flex;
+    margin: 2rem 2.5rem;
+    height: 40px;
+    width:40px;
+    filter: grayscale(100%);
+    background: transparent;
+    transition: filter 0.3s;
 }
 
 
-.experience-list .skills-icon, img {
-    display: inline-flex;
-    margin: 2rem 2.5rem;
-    height: 50px;
-    width:50px;
-    filter: grayscale(100%);
-    background: transparent;
-    transition: all 0.3s ease-in-out;
+#experience-list .skills-icon, img:hover {
+    filter: grayscale(0%);
+}
+
+
+/* Project list*/
+
+
+.project-icons .img-project {
+    height: 150px;
+    width:300px;
+    float:right;   
+}
+
+
+.project-icons, h4  {
+    margin: 3.5rem 0;
+    padding-bottom: 2rem;  
 }
