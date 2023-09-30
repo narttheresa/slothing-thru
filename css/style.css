@@ -46,29 +46,6 @@ body {
     color: blanchedalmond;
 } 
 
-.sticky-sidebar p {
-    margin: 1.5rem 0rem;
-    background: linear-gradient(to right, rgb(24, 196, 202), rgb(209, 161, 168), rgb(9, 194, 101));
-    background-size: 100% 100%;
-    -webkit-background-clip:text;
-    animation: rainbow 2s ease-in-out ;
-    color:blanchedalmond;
-    max-width: 50rem;
-    display: block;
-    text-align:left;
-    transition: color .2s ease-in-out;
-    text-transform:uppercase;
-    font-weight: 800;
-}
-
-.sticky-sidebar p:hover {
-    color:rgba(0,0,0,0);
-}
-@keyframes rainbow { 
-  0%{background-position:left}
-  50%{background-position:right}
-  100%{background-position:left}
-}
 
 
 h2 {
@@ -92,11 +69,6 @@ h2, p {
     font-size: 0.6rem;
 }
 
-p {
-    text-align: center;
-    position: relative;
-    left: 750px;
-}
 /*nav bar*/
  
 .sticky-sidebar .nav-list a:link, a:visited {
@@ -118,7 +90,7 @@ p {
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
-    padding: 5px 0;
+    padding: 8px 0;
     position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -226,7 +198,7 @@ p {
 .nav-hidden ul li {
     list-style-type: none;
     margin: 0;
-    padding: 0.2rem 0;
+    padding: 4rem 0;
     line-height: 2.1;
 }
 
