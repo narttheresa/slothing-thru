@@ -20,31 +20,14 @@
 
 body {
     color:blanchedalmond;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+
 }
 
-/* styles for desktop devices */
-@media only screen and (min-width: 992px) {
-    body {
-      width: 80%;
-      margin: auto;
-    }
-  }
-  
-  /* styles for tablet devices */
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    body {
-      width: 90%;
-      margin: auto;
-    }
-  }
-  
-  /* styles for mobile devices */
-  @media only screen and (max-width: 767px) {
-    body {
-      width: 100%;
-      margin: 0;
-    }
-  }
 /*sticky sidebar and main content */
 
 
@@ -52,15 +35,16 @@ body {
 .sticky-sidebar 
 {
     padding-left: 2vh;
-   
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .sticky-sidebar h1  {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight:bolder;
     padding-bottom: 2.5rem;
     padding-top: 8rem;
-    width: 300px;
+    width: 100%;
 }
 
 .sticky-sidebar h1 a:link, a:visited {
@@ -70,7 +54,7 @@ body {
 
 .sticky-sidebar p {
     margin: 1.5rem 0rem;
-    background: linear-gradient(to right, aquamarine, pink, springgreen);
+    background: linear-gradient(to right, rgb(24, 196, 202), rgb(209, 161, 168), rgb(9, 194, 101));
     background-size: 100% 100%;
     -webkit-background-clip:text;
     animation: rainbow 2s ease-in-out ;
@@ -91,6 +75,7 @@ body {
   50%{background-position:right}
   100%{background-position:left}
 }
+
 
 h2 {
     font-size: 3rem;
@@ -120,7 +105,7 @@ h2, p {
 
 .sticky-sidebar,
 .main-content {
-    padding: 2rem;
+    padding: 0.2rem;
     background-color: rgba(192, 176, 240, 0.832);
     line-height: 1.5;
     justify-content:right;
@@ -136,7 +121,6 @@ h2, p {
 .sticky-sidebar {
     width: 25%;
     height: 2vh;
-   
     position: sticky;
     top: 0;
     
@@ -145,12 +129,11 @@ h2, p {
 
 /*navigation sidebar */
 
-.sticky-sidebar .nav-hidden {
-    display: block;
-    padding-top: 2rem; 
+.nav-hidden {
+    flex: 1;
 }
 
-.nav-hidden, ul, li {
+.nav-hidden ul li {
     list-style-type: none;
     margin: 0;
     padding: 0.2rem 0;
@@ -176,6 +159,30 @@ h2, p {
     color:#6df5ff;
  }
 
+.contact {
+    position:relative;
+    top:4rem;
+    text-transform: uppercase;
+}
+
+
+.contact a {
+    text-transform: uppercase;
+    font-size: smaller;
+    color: blanchedalmond;
+}
+
+
+.contact  img {
+    width: 50%;
+    height: 40%;
+    float: right;
+    position:relative;
+    bottom: 9rem;
+    left: 5rem;
+    border-radius: 60%; 
+}
+ /*nav bar*/
  
 .sticky-sidebar .nav-list a:link, a:visited {
     text-transform: uppercase;
@@ -297,7 +304,8 @@ h2, p {
 /*experience list icons*/
 
 .skills-icon .img-respond {
-    display: inline-flex;
+    display:inline-flex;
+    max-width: 60%;
     margin: 2rem 2.5rem;
     height: 40px;
     width:40px;
@@ -314,10 +322,14 @@ h2, p {
 
 /* Project list*/
 
+.project-icons {
+    align-content: ;
+}
 
 .project-icons .img-project {
-    display: inline;
+    display: inline-flex;
     position:relative;
+    left: 90px;
     max-width: 300px;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
@@ -338,6 +350,104 @@ h2, p {
   
 }
 
-.text-box h4 {
 
-}
+/* styles for desktop devices */
+@media only screen and (min-width: 992px) {
+    body  {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  
+  /* styles for tablet devices */
+  @media only screen and (min-width: 600px) and (max-width: 991px) {
+    body {
+      width: 70%;
+      margin: auto;
+    }
+
+    .sticky-sidebar {
+       padding-left: 0.5rem;
+       padding-right: 0.5rem;
+       font-size: small;
+    }
+
+    .main-content {
+        font-size: small;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .skills-icon .img-respond {
+       margin: 1rem 1.5rem;
+    }
+
+    
+    .text-box {
+        text-align:center;
+        float:right;
+        position:relative;
+        left:-2rem;
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+  }
+  
+
+
+  /* styles for mobile devices */
+  @media only screen and (max-width: 400px) {
+    body {
+      width: 80%;
+      margin: 0;
+    }
+
+    .sticky-sidebar h1 {
+        padding: 0;
+    }
+
+    .sticky-sidebar {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        font-size: smaller;
+     }
+ 
+     .main-content {
+         font-size: smaller;
+         float: right;
+     }
+ 
+     h2 {
+         font-size: 1.5rem;
+     }
+ 
+     .social-media a {
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+     }
+
+     .skills-icon .img-respond {
+        padding: 0.25rem 0.25rem;
+     }
+ 
+     
+     .project-icons .text-box {
+        
+        text-align:justify;
+        float: right;
+        
+        
+     }
+
+     .project-icons .img-project {
+        position: relative;
+     }
+  }
+
+
+
+
+
