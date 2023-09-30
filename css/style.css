@@ -9,9 +9,7 @@
     border: none;
     scroll-behavior: smooth;
     font-family: 'Mooli', sans-serif;
-    background-color: rgb(192, 176, 240);
-    
-    
+    background-color: rgb(192, 176, 240); 
  }
 
  html {
@@ -24,13 +22,36 @@ body {
     color:blanchedalmond;
 }
 
+/* styles for desktop devices */
+@media only screen and (min-width: 992px) {
+    body {
+      width: 80%;
+      margin: auto;
+    }
+  }
+  
+  /* styles for tablet devices */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  
+  /* styles for mobile devices */
+  @media only screen and (max-width: 767px) {
+    body {
+      width: 100%;
+      margin: 0;
+    }
+  }
 /*sticky sidebar and main content */
-@media (min-width: 1024px);
+
 
 .sticky-wrapped,
 .sticky-sidebar 
 {
-    padding-left: 10vh;
+    padding-left: 2vh;
    
 }
 
@@ -48,20 +69,18 @@ body {
 } 
 
 .sticky-sidebar p {
-    margin: 2.5rem 0rem;
+    margin: 1.5rem 0rem;
     background: linear-gradient(to right, aquamarine, pink, springgreen);
     background-size: 100% 100%;
-    background-clip: text;
     -webkit-background-clip:text;
-    animation: rainbow 2s ease-in-out infinite;
+    animation: rainbow 2s ease-in-out ;
     color:blanchedalmond;
-    font-size: 1.2rem;
-    width: 50rem;
+    max-width: 50rem;
     display: block;
     text-align:left;
     transition: color .2s ease-in-out;
     text-transform:uppercase;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .sticky-sidebar p:hover {
@@ -86,7 +105,7 @@ h3 {
 }
 
 h2, p {
-    padding: 0.3rem 0.2rem;
+    padding: 0.1em 0.1em;
 }
 
 .sticky-sidebar p {
@@ -110,13 +129,14 @@ h2, p {
 .main-content {
     width: 60%;
     height: 150vh;
+    text-align: justify;
 }
 
 
 .sticky-sidebar {
     width: 25%;
     height: 2vh;
-    position: -webkit-sticky;
+   
     position: sticky;
     top: 0;
     
@@ -276,7 +296,7 @@ h2, p {
 
 /*experience list icons*/
 
-#experience-list .skills-icon, img {
+.skills-icon .img-respond {
     display: inline-flex;
     margin: 2rem 2.5rem;
     height: 40px;
@@ -287,7 +307,7 @@ h2, p {
 }
 
 
-#experience-list .skills-icon, img:hover {
+.skills-icon .img-respond:hover {
     filter: grayscale(0%);
 }
 
@@ -296,13 +316,28 @@ h2, p {
 
 
 .project-icons .img-project {
-    height: 150px;
-    width:300px;
-    float:right;   
+    display: inline;
+    position:relative;
+    max-width: 300px;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    filter: grayscale(100%);
+    background: transparent;
+    transition: filter 0.3s;
 }
 
+.project-icons .img-project:hover {
+    filter: grayscale(0%);
+}
 
-.project-icons, h4  {
-    margin: 3.5rem 0;
-    padding-bottom: 2rem;  
+.text-box {
+    float:left;
+    width: 50%;
+    padding-top: 2rem;
+    padding-right: 2rem;
+  
+}
+
+.text-box h4 {
+
 }
